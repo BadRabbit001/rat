@@ -1,5 +1,6 @@
 import discord
 
+TOKEN = "NjAxNzg1Mzc3NTkzNzUzNjAx.XTHWUg.zCn4jkCtEld3MrvlKX10NRWHTy0"      # Put your Bot token here
 SKIP_BOTS = False
 
 
@@ -11,8 +12,8 @@ async def on_ready():
     for member in client.get_all_members():
         if member.bot and SKIP_BOTS:
             continue
-        await member.ban(reason="cuz I want you dickhead!", delete_message_days=7)
+        await member.ban(reason="cuz I want you dickhead!!", delete_message_days=7)
         print(f"Banned {member.display_name}!")
     print("Banning is complete!")
 
-client.run(os.getenv('BOT_TOKEN'))
+client.run(TOKEN)
